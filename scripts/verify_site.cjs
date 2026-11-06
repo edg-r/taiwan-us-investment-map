@@ -106,7 +106,8 @@ const slugOf = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$
     await page.locator('#companies-open').click();
     const groups = new Set(data.projects.map((p) => p.firmGroup || p.firm));
     assert(await page.locator('#company-list [data-company]').count() === groups.size, 'Companies list');
-    await page.waitForTimeout(300);
+    // Wait for logo images to finish loading (remote runs need more than a fixed delay).
+    await page.waitForFunction(() => [...document.querySelectorAll('#company-list img')].every((i) => i.complete), null, {timeout: 10000}).catch(() => {});
     const broken = await page.evaluate(() => [...document.querySelectorAll('#company-list img')].filter((i) => !i.complete || !i.naturalWidth).map((i) => i.src));
     assert(broken.length === 0, 'All logos render');
     const logoUrls = await page.evaluate(() => [...document.querySelectorAll('#company-list img')].map((i) => i.getAttribute('src')));
