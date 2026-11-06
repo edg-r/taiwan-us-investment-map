@@ -1,5 +1,5 @@
 state_fips,state_code,state_name,documented_total_usd_million,firm_total_usd_million,government_total_usd_million,announced_usd_million,completed_usd_million,acquisition_usd_million,equity_usd_million,loan_usd_million,undisclosed_usd_million,record_count,priced_record_count,unpriced_record_count,no_state_total,as_of
-01,AL,Alabama,,,,,,,,,,1,0,1,1,2026-11-05
+01,AL,Alabama,430.0,430.0,,430.0,,,,,,2,1,1,0,2026-11-05
 02,AK,Alaska,4400.0,,4400.0,4400.0,,,,,,1,1,0,0,2026-11-05
 04,AZ,Arizona,265200.0,265200.0,,265200.0,,,,,,5,3,2,0,2026-11-05
 05,AR,Arkansas,,,,,,,,,,1,0,1,1,2026-11-05

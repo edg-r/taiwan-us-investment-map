@@ -9,6 +9,7 @@ SOURCES={
 'Cathay Financial / Cathay Life':('https://www.cathayholdings.com/en/holdings/intro/intro/about','https://www.cathayholdings.com/holdings/web/img/common/logo.png'),
 'GlobalWafers':('https://www.sas-globalwafers.com/','https://www.sas-globalwafers.com/wp-content/uploads/2019/11/logo-1.png'),
 'ASE':('https://www.aseglobal.com/','https://cdn.prod.website-files.com/6a4c7cf038139cd8999ff317/6a4c7cf038139cd8999ff343_ASE_logo.png'),
+'Minth Group':('https://www.minthgroup.com/ENG/','https://www.minthgroup.com/ENG/images/logo.png'),
 'Lotus Pharmaceutical':('https://www.lotuspharm.com/','https://api.lotuspharm.com/storage/site/01KAWVCV72Q3H0K0K5DVEJJWQP.png')}
 provenance=json.loads((ROOT/'logos/provenance.json').read_text())
 ready=json.loads((ROOT/'js/logos.js').read_text().split(' = ')[1].rstrip(';\n'))

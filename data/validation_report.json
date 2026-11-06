@@ -1,12 +1,12 @@
 {
   "as_of": "2026-11-05",
   "fixture": false,
-  "record_count": 75,
+  "record_count": 76,
   "state_count": 51,
-  "state_total_usd_million": 293114.225,
+  "state_total_usd_million": 293544.225,
   "by_type": {
-    "overall": 293114.225,
-    "firm": 288714.225,
+    "overall": 293544.225,
+    "firm": 289144.225,
     "government": 4400.0
   },
   "national_records": 8,
@@ -16,90 +16,90 @@
   },
   "formats": {
     "CSV records": {
-      "row_count": 75,
-      "all_record_amount_usd_million": 293114.2249999999,
+      "row_count": 76,
+      "all_record_amount_usd_million": 293544.2249999999,
       "null_amount_count": 44,
-      "state_total_usd_million": 293114.2249999999,
+      "state_total_usd_million": 293544.2249999999,
       "national_records": 8,
       "national_amount_usd_million": null,
       "by_type": {
-        "firm": 288714.2249999999,
+        "firm": 289144.2249999999,
         "government": 4400.0
       }
     },
     "CSV states": {
       "row_count": 51,
-      "all_record_amount_usd_million": 293114.2249999999,
-      "null_amount_count": 35,
-      "state_total_usd_million": 293114.2249999999,
+      "all_record_amount_usd_million": 293544.2249999999,
+      "null_amount_count": 34,
+      "state_total_usd_million": 293544.2249999999,
       "by_type": {
-        "firm": 288714.2249999999,
+        "firm": 289144.2249999999,
         "government": 4400.0
       }
     },
     "Excel records": {
-      "row_count": 75,
-      "all_record_amount_usd_million": 293114.2249999999,
+      "row_count": 76,
+      "all_record_amount_usd_million": 293544.2249999999,
       "null_amount_count": 44,
-      "state_total_usd_million": 293114.2249999999,
+      "state_total_usd_million": 293544.2249999999,
       "national_records": 8,
       "national_amount_usd_million": null,
       "by_type": {
-        "firm": 288714.2249999999,
+        "firm": 289144.2249999999,
         "government": 4400.0
       }
     },
     "Excel states": {
       "row_count": 51,
-      "all_record_amount_usd_million": 293114.2249999999,
-      "null_amount_count": 35,
-      "state_total_usd_million": 293114.2249999999,
+      "all_record_amount_usd_million": 293544.2249999999,
+      "null_amount_count": 34,
+      "state_total_usd_million": 293544.2249999999,
       "by_type": {
-        "firm": 288714.2249999999,
+        "firm": 289144.2249999999,
         "government": 4400.0
       }
     },
     "Stata records": {
-      "row_count": 75,
-      "all_record_amount_usd_million": 293114.2249999999,
+      "row_count": 76,
+      "all_record_amount_usd_million": 293544.2249999999,
       "null_amount_count": 44,
-      "state_total_usd_million": 293114.2249999999,
+      "state_total_usd_million": 293544.2249999999,
       "national_records": 8,
       "national_amount_usd_million": null,
       "by_type": {
-        "firm": 288714.2249999999,
+        "firm": 289144.2249999999,
         "government": 4400.0
       }
     },
     "Stata states": {
       "row_count": 51,
-      "all_record_amount_usd_million": 293114.2249999999,
-      "null_amount_count": 35,
-      "state_total_usd_million": 293114.2249999999,
+      "all_record_amount_usd_million": 293544.2249999999,
+      "null_amount_count": 34,
+      "state_total_usd_million": 293544.2249999999,
       "by_type": {
-        "firm": 288714.2249999999,
+        "firm": 289144.2249999999,
         "government": 4400.0
       }
     },
     "GeoPackage records": {
-      "row_count": 75,
-      "all_record_amount_usd_million": 293114.2249999999,
+      "row_count": 76,
+      "all_record_amount_usd_million": 293544.2249999999,
       "null_amount_count": 44,
-      "state_total_usd_million": 293114.2249999999,
+      "state_total_usd_million": 293544.2249999999,
       "national_records": 8,
       "national_amount_usd_million": null,
       "by_type": {
-        "firm": 288714.2249999999,
+        "firm": 289144.2249999999,
         "government": 4400.0
       }
     },
     "GeoPackage states": {
       "row_count": 51,
-      "all_record_amount_usd_million": 293114.2249999999,
-      "null_amount_count": 35,
-      "state_total_usd_million": 293114.2249999999,
+      "all_record_amount_usd_million": 293544.2249999999,
+      "null_amount_count": 34,
+      "state_total_usd_million": 293544.2249999999,
       "by_type": {
-        "firm": 288714.2249999999,
+        "firm": 289144.2249999999,
         "government": 4400.0
       }
     }
@@ -121,20 +121,20 @@
   "zip_verified": true,
   "mismatches": [],
   "source_sha256": {
-    "js/data.js": "93c65261d2fa4cf8e2d96e2da4b9b12c133312605b38c44cfde2df22f3ebbf34",
+    "js/data.js": "6e44944c0fbdf5d022dbbadd470585cbdd720b8dea128e8131aba09e7e232d33",
     "js/atlas.js": "9affedeebdc1d7454d5026779d16d4f8232f548a88387c7f82a03bcc46eb2099",
-    "investment-ledger.csv": "7f60cb46727ff8dcf13cb9aff4579a5c6ba5dddfb5e752a023b97c8defb5f2dc"
+    "investment-ledger.csv": "2cf91a06556d30f309dedd6264af16bf0e18e80e9b4793cca4d4d520d7010848"
   },
   "site_reconciliation": {
     "data_source": "js/data.js",
-    "state_total_usd_million": 293114.225,
+    "state_total_usd_million": 293544.225,
     "by_type": {
-      "overall": 293114.225,
-      "firm": 288714.225,
+      "overall": 293544.225,
+      "firm": 289144.225,
       "government": 4400.0
     },
-    "priced_states": 16,
-    "records": 75,
+    "priced_states": 17,
+    "records": 76,
     "national_records": 8,
     "matches_all_export_formats": true
   },

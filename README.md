@@ -6,7 +6,7 @@ Live site: https://edg-r.github.io/taiwan-us-investment-map/
 
 ## Release: 5 November 2026
 
-The audited ledger contains 75 records, including eight national records. Sixteen states have a documented subtotal. State subtotal: $293,114.225 million, comprising firms $288,714.225 million and government $4,400 million. The site displays $293.11 billion, $288.71 billion and $4.40 billion respectively. TSMC Arizona’s $265.00 billion program represents 90.41% of the state subtotal. National records are never summed into it. This is a documented ledger, not foreign direct investment (FDI) stock.
+The audited ledger contains 76 records, including eight national records. Seventeen states have a documented subtotal. State subtotal: $293,544.225 million, comprising firms $289,144.225 million and government $4,400 million. The site displays $293.54 billion, $289.14 billion and $4.40 billion respectively. TSMC Arizona’s $265.00 billion program represents 90.28% of the state subtotal. National records are never summed into it. This is a documented ledger, not foreign direct investment (FDI) stock.
 
 
 The map uses a plum sequential ramp, with flows and accents in the same family. A hatch means records without a documented state total. Gray means no records. Neither means zero. The six origin ports are Taipei/New Taipei (Keelung, Xizhi, Tucheng, Neihu), Taoyuan, Hsinchu (city and county, including the Science Park), Taichung (including Changhua), Tainan and Kaohsiung (including Pingtung). Record details retain original cities. Labels use measured lanes in geographic order. The inset bundles Taiwan main island and Penghu from country 158 in world-atlas 2.0.2. Kinmen and Matsu are excluded from its frame; no mainland context is drawn.

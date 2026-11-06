@@ -6,11 +6,11 @@ Taiwanese investment in U.S. states, 2014 to November 2026
 
 ## Coverage
 
-75 records, including 8 national records; 51 states including DC. As of 2026-11-05. 
+76 records, including 8 national records; 51 states including DC. As of 2026-11-05. 
 
 ## State subtotal
 
-293114.225 USD millions. Includes only state_allocated = 1. National amounts are never counted.
+293544.225 USD millions. Includes only state_allocated = 1. National amounts are never counted.
 
 ## Investor types
 
@@ -50,7 +50,7 @@ Activate the documented scratch virtual environment, then: python3 -I scripts/bu
 
 ## Release reconciliation
 
-75 audited records, eight national records, 16 states with a subtotal. Firms: 288714.225 USD million; government: 4400 USD million; documented state subtotal: 293114.225 USD million. TSMC Arizona: 265000 USD million, 90.41 percent of the subtotal.
+76 audited records, eight national records, 17 states with a subtotal. Firms: 289144.225 USD million; government: 4400 USD million; documented state subtotal: 293544.225 USD million. TSMC Arizona: 265000 USD million, 90.28 percent of the subtotal.
 
 ## Categories
 

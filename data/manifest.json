@@ -1,27 +1,27 @@
 {
   "taiwan_us_investment_data.zip": {
-    "bytes": 465245
+    "bytes": 476168
   },
   "LICENSE.md": {
     "bytes": 607
   },
   "taiwan_us_investment_states.csv": {
-    "bytes": 2813
+    "bytes": 2828
   },
   "taiwan_us_investment.gpkg": {
-    "bytes": 512000
+    "bytes": 520192
   },
   "taiwan_us_investment_records.csv": {
-    "bytes": 94636
+    "bytes": 98692
   },
   "taiwan_us_investment.xlsx": {
-    "bytes": 58316
+    "bytes": 60292
   },
   "import_stata.do": {
     "bytes": 8254
   },
   "taiwan_us_investment_records.dta": {
-    "bytes": 259491
+    "bytes": 274601
   },
   "CODEBOOK.md": {
     "bytes": 12016

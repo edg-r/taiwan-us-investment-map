@@ -74,11 +74,11 @@ drop as_of
 rename date_tmp as_of
 format as_of %tdCCYY-NN-DD
 label variable as_of "Research cutoff, 2026-11-05."
-assert _N == 75
+assert _N == 76
 preserve
 keep if state_allocated == 1
 collapse (sum) amount_usd_million
-assert abs(amount_usd_million[1] - 293114.225) < 0.000001
+assert abs(amount_usd_million[1] - 293544.225) < 0.000001
 restore
 save "taiwan_us_investment_records.dta", replace
 
@@ -120,6 +120,6 @@ label variable as_of "Research cutoff, 2026-11-05."
 assert _N == 51
 preserve
 collapse (sum) documented_total_usd_million
-assert abs(documented_total_usd_million[1] - 293114.225) < 0.000001
+assert abs(documented_total_usd_million[1] - 293544.225) < 0.000001
 restore
 save "taiwan_us_investment_states.dta", replace

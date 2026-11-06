@@ -246,7 +246,7 @@ def main():
         check(back.geometry.isna().sum()==sum(g is None for g in geoms),'Null geometry changed')
         if name=='records':check(back.loc[back.state_code=='US'].geometry.isna().all(),'National geometry is not null')
         verify(back.drop(columns='geometry').to_dict('records'),rows,name,'GeoPackage '+name,report['formats'])
-    notes['Release reconciliation']='75 audited records, eight national records, 16 states with a subtotal. Firms: 288714.225 USD million; government: 4400 USD million; documented state subtotal: 293114.225 USD million. TSMC Arizona: 265000 USD million, 90.41 percent of the subtotal.'
+    notes['Release reconciliation']='76 audited records, eight national records, 17 states with a subtotal. Firms: 289144.225 USD million; government: 4400 USD million; documented state subtotal: 293544.225 USD million. TSMC Arizona: 265000 USD million, 90.28 percent of the subtotal.'
     sections=['# Codebook\n']+[f'## {k}\n\n{v}\n' for k,v in notes.items()]
     sections.append('## Categories\n\nInvestor type: firm; government.\n\nAmount basis: '+', '.join(builder.BASIS)+'.\n\nStatus: '+', '.join(sorted(builder.STATUSES))+'.\n\nNational amounts are not counted in state totals. All monetary fields use nominal USD millions. Missing values remain blank or null, including type totals with no priced records.\n')
     for name in tables:

@@ -28,6 +28,7 @@ Changes to every file: rasterized from the Commons thumbnail where the original 
 | Lotus Pharmaceutical | [lotus-pharmaceutical.png](https://www.lotuspharm.com/) | [Official trademark; rights reserved](https://www.lotuspharm.com/) | Lotus Pharmaceutical |
 | PharmaEssentia | [pharmaessentia.svg](https://us.pharmaessentia.com/) | [Official trademark; rights reserved](https://us.pharmaessentia.com/) | PharmaEssentia |
 | Bora Pharmaceuticals | [bora-pharmaceuticals.png](https://bora-corp.com/) | [Official trademark; rights reserved](https://bora-corp.com/) | Bora Pharmaceuticals |
+| Minth Group | [minth-group.png](https://www.minthgroup.com/ENG/) | [Official trademark; rights reserved](https://www.minthgroup.com/ENG/) | Minth Group |
 
 ## Fallback tiles
 
