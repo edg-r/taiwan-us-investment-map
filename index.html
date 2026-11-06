@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taiwanese investment in U.S. states, 2014 to November 2026</title>
+  <meta name="description" content="Documented investment commitments and transactions by Taiwanese firms and government investors, by U.S. state, 2014 to 5 Nov 2026. Not FDI stock.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Taiwanese investment in U.S. states, 2014 to November 2026">
+  <meta property="og:description" content="75 sourced records. $293.11 billion in documented state commitments, including TSMC’s $265.00 billion Arizona program. Not FDI stock.">
+  <meta property="og:url" content="https://edg-r.github.io/taiwan-us-investment-map/">
+  <meta property="og:image" content="https://edg-r.github.io/taiwan-us-investment-map/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Map of documented Taiwanese investment by U.S. state, with a Taiwan origin inset.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taiwanese investment in U.S. states, 2014 to November 2026">
+  <meta name="twitter:description" content="75 sourced records. $293.11 billion in documented state commitments, including TSMC’s $265.00 billion Arizona program. Not FDI stock.">
+  <meta name="twitter:url" content="https://edg-r.github.io/taiwan-us-investment-map/">
+  <meta name="twitter:image" content="https://edg-r.github.io/taiwan-us-investment-map/share.png">
+  <meta name="twitter:image:alt" content="Map of documented Taiwanese investment by U.S. state, with a Taiwan origin inset.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0e13'/%3E%3Cpath d='M6 22c6-12 14-12 20-2' fill='none' stroke='%23cd2e3a' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css?v=20261105r5">
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get("theme");
+      var t = q === "light" || q === "dark" ? q : null;
+      if (!t) {
+        try { t = localStorage.getItem("ki-theme-v1"); } catch (e) {}
+      }
+      if (t !== "light" && t !== "dark") t = "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body>
+  <div class="map-view">
+  <header>
+    <div class="brand">
+      <h1>Taiwanese investment, by state</h1>
+      <p class="headline" id="headline"></p>
+      <p class="sub"><span class="sub-detail">Documented commitments and transactions, </span>2014 to 5 Nov 2026. Not FDI stock.</p>
+    </div>
+    <div class="stat-block">
+      <button type="button" class="stat" id="about-open" aria-haspopup="dialog" aria-controls="notes">
+        <span class="stat-value" id="stat-value">Documented subtotal</span>
+        <span class="stat-label" id="stat-label">documented state subtotal</span>
+      </button>
+      <div class="seg investor-toggle" role="radiogroup" aria-label="Investor type">
+        <button type="button" role="radio" data-type="all" aria-checked="true">All</button>
+        <button type="button" role="radio" data-type="firm" aria-checked="false" tabindex="-1">Firms</button>
+        <button type="button" role="radio" data-type="government" aria-checked="false" tabindex="-1">Government</button>
+      </div>
+    </div>
+    <div class="tools">
+      <button type="button" class="ranking-toggle" id="ranking-open" aria-controls="panel" aria-expanded="false">States</button>
+      <button type="button" class="ranking-toggle" id="companies-open" aria-controls="panel" aria-expanded="false">Companies</button>
+      <div class="seg layer-toggle" role="radiogroup" aria-label="Map layers">
+        <button type="button" role="radio" data-mode="heat" aria-checked="false">Heat map</button>
+        <button type="button" role="radio" data-mode="flows" aria-checked="false">Flows</button>
+        <button type="button" role="radio" data-mode="both" aria-checked="true">Both</button>
+      </div>
+      <button type="button" class="icon" id="theme" aria-label="Switch to light theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-moon"><path d="M14.5 3.2a8.2 8.2 0 1 0 6.3 12.8A7.2 7.2 0 0 1 14.5 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-sun"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4 18 18M18 6l-1.6 1.6M7.6 16.4 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="icon" id="flow-motion" aria-label="Pause motion" aria-pressed="false" title="Pause motion">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="motion-pause"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="motion-play"><path d="m9 6 9 6-9 6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span class="control-tip" aria-hidden="true">Pause motion</span>
+      </button>
+      <button type="button" class="icon" id="replay" aria-label="Replay flow animation" title="Replay flows">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M19.6 4.8v4.2h-4.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="control-tip" aria-hidden="true">Replay flows</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <p class="sr" id="map-help">Arrow keys move between states. Enter opens the records behind the focused state. Escape clears a company selection or closes the detail.</p>
+    <div id="stage">
+      <svg id="map" role="group" aria-describedby="map-help"></svg>
+      <div id="company-focus" hidden><span id="company-focus-label"></span><button type="button" id="company-clear" aria-label="Clear company focus">×</button></div>
+      <div id="legend"></div>
+      <div id="tip" role="tooltip" hidden></div>
+    </div>
+    <p class="sr" id="selection-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <aside id="panel" aria-labelledby="panel-title" hidden></aside>
+  </main>
+  <footer><a id="download-data" href="data/taiwan_us_investment_data.zip" aria-haspopup="dialog" aria-controls="notes">Download data</a><button type="button" id="about-data" aria-haspopup="dialog" aria-controls="notes">About the data &amp; sources</button></footer>
+  </div>
+
+  <dialog id="notes" aria-labelledby="notes-title">
+    <div class="dialog-header">
+      <div class="dialog-heading">
+        <h2 id="notes-title">Data &amp; sources</h2>
+        <button type="button" id="notes-close" class="dialog-close" aria-label="Close data and sources" autofocus>×</button>
+      </div>
+      <div class="dialog-tabs" role="tablist" aria-label="Data and sources sections">
+        <button type="button" id="about-tab" role="tab" aria-controls="about-figures" aria-selected="true">About these figures</button>
+        <button type="button" id="downloads-tab" role="tab" aria-controls="downloads" aria-selected="false" tabindex="-1">Download data</button>
+      </div>
+    </div>
+    <div class="dialog-body">
+      <section id="about-figures" role="tabpanel" aria-labelledby="about-tab">
+      <h3>About these figures</h3>
+      <p>State color is the documented subtotal for 2014 to 5 Nov 2026. Larger amounts are deeper plum in the light theme and brighter plum in the dark theme. A hatched state has records but no documented total for the active investor type. A plain gray state has no records in the ledger. Neither blank means zero.</p>
+      <p><span id="methods-total">The documented subtotal</span> sums sourced, state-specific project commitments, completed project totals, acquisitions, equity investments and loan financing. It is not foreign direct investment (FDI) stock, an annual investment flow, or a verified transfer from Taiwan. Announced scope does not establish how much was spent. Unallocated deals and presence-only records are excluded from the subtotal.</p>
+      <p>Sources include company releases and reports, state and local government announcements, regulatory filings and public records. Each record links to its source. Full project scopes are counted once; missing state amounts remain blank. This is a documented ledger, not a complete census of Taiwanese investment. Click a company to see its other U.S. states.</p>
+      <h3 class="about-sub">Read the largest figures with care</h3>
+      <p>Full project scopes enter the subtotal once. TSMC’s superseded $12.00 billion, $40.00 billion, $65.00 billion and $165.00 billion announcements are not added to its latest $265.00 billion Arizona program. Joint ventures use the documented project scope, with any separately disclosed Taiwanese investor commitment retained separately and never added again. National and unallocated values stay outside state totals. Cancelled or sold records have null investment amounts, with historical figures retained as transaction values. Grants, incentives and economic impact estimates are excluded. Null means unknown or excluded, never zero.</p>
+      <h3 class="about-sub">Judgment calls</h3>
+      <p>Formosa Sunshine’s $9.40 billion Louisiana project remains in the total as paused: a 29 September 2026 federal court order still calls it proposed, rather than cancelled. Formosa Point Comfort’s $5.00 billion program is excluded because it was announced in 2012, before the window. Foxconn Wisconsin uses the November 2025 amended $1.20 billion target; the original 2017 $10.00 billion plan is retained as transaction value. Foxconn Lordstown was sold to a SoftBank affiliate in 2025 and has a null investment amount. CPC Corporation’s up to $4.40 billion Alaska LNG investment is planned under a letter of intent, not a final investment decision, and is classified as government.</p>
+      <p>Government investors can include the National Development Fund, CPC Corporation, Taipower, Bureau of Labor Funds and Taiwan Eximbank. Loans or guarantees already covered by a firm project are excluded from additive totals.</p>
+      <h3 class="about-sub">Investor type</h3>
+      <p>Each record names its investor type. <strong>Firms</strong> are commercial companies, including their U.S. affiliates and joint ventures. <strong>Government</strong> covers public institutions, state-owned enterprises, public lenders, sovereign and public pension funds, and government frameworks, as classified in the ledger. The type describes the investor. It does not verify where the money came from.</p>
+      <p>All, Firms and Government filter every state figure, color, record list, tooltip and flow. The choice is kept in the link, for example <code>#type=government</code>, and combines with a company link such as <code>#type=firm&amp;company=tsmc</code>. Downloads always include both types.</p>
+      <h3 class="about-sub">National records</h3>
+      <p>The January 2026 U.S.-Taiwan investment memorandum of understanding (MOU) covers $250.00 billion of corporate investment plus up to $250.00 billion in credit guarantees. These are non-additive with each other and with state records. The February 2026 Agreement on Reciprocal Trade references that framework and industrial clusters; it creates no additional investment tranche here. Corporate references also overlap: TSMC’s $265.00 billion pledge is the Arizona program, and GlobalWafers’ $7.50 billion pledge overlaps Sherman. All eight national records remain separate, without a combined national total, and never enter state colors or flows.</p>
+      <div id="national-about"></div>
+      <p class="credits">Map: U.S. Census / Natural Earth state shapes via <a href="https://github.com/topojson/us-atlas">us-atlas</a>; Natural Earth Taiwan main island and Penghu outline, via <a href="https://github.com/topojson/world-atlas">world-atlas</a> 2.0.2; drawn with <a href="https://d3js.org/">D3</a>. Company marks: Wikimedia Commons, credited with licenses in <a href="logos/README.md">logos/README.md</a>. Fonts: <a href="https://rsms.me/inter/">Inter</a> and <a href="https://github.com/productiontype/Newsreader">Newsreader</a>, under the SIL Open Font License.</p>
+      </section>
+      <section class="download-section" id="downloads" role="tabpanel" aria-labelledby="downloads-tab" hidden>
+        <h3 id="downloads-title" tabindex="-1">Download data</h3>
+        <p id="download-coverage"></p>
+        <ul class="download-list">
+          <li><a href="data/taiwan_us_investment_data.zip" download><strong>All formats · ZIP</strong><span class="file-size">454 KB</span></a></li>
+          <li><a href="data/taiwan_us_investment_records.csv" download><span>CSV · Records</span><span class="file-size">92 KB</span></a></li>
+          <li><a href="data/taiwan_us_investment_states.csv" download><span>CSV · States</span><span class="file-size">2.7 KB</span></a></li>
+          <li><a href="data/taiwan_us_investment.xlsx" download><span>Excel · Records, States &amp; codebook</span><span class="file-size">57 KB</span></a></li>
+          <li><a href="data/taiwan_us_investment_records.dta" download><span>Stata · Records</span><span class="file-size">253 KB</span></a></li>
+          <li><a href="data/taiwan_us_investment_states.dta" download><span>Stata · States</span><span class="file-size">18 KB</span></a></li>
+          <li><a href="data/taiwan_us_investment.gpkg" download><span>GeoPackage · States &amp; projects for QGIS</span><span class="file-size">500 KB</span></a></li>
+          <li><a href="data/CODEBOOK.md" download><span>Codebook · Definitions &amp; limitations</span><span class="file-size">12 KB</span></a></li>
+          <li><a href="data/import_stata.do" download><span>Stata import &amp; labeling script</span><span class="file-size">8.1 KB</span></a></li>
+        </ul>
+        <p>Data compilation: <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC BY 4.0)</a>. Source materials and company marks retain their own rights.</p>
+        <h3>Suggested citation</h3>
+        <p class="citation-text" id="data-citation">Agunias, E. (2026). Taiwanese investment in U.S. states, 2014 to November 2026 [Data set]. https://edg-r.github.io/taiwan-us-investment-map/</p>
+        <button type="button" class="text-btn" id="copy-citation">Copy citation</button><span class="citation-status" id="citation-status" role="status" aria-live="polite"></span>
+      </section>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p class="noscript">This map needs JavaScript. Download the dataset to inspect state totals and national records.</p>
+  </noscript>
+
+  <script src="vendor/d3.min.js?v=20261105r5"></script>
+  <script src="vendor/topojson-client.min.js?v=20261105r5"></script>
+  <script src="js/atlas.js?v=20261105r5"></script>
+  <script src="js/data.js?v=20261105r5"></script>
+  <script src="js/format.js?v=20261105r5"></script>
+  <script src="js/logos.js?v=20261105r5"></script>
+  <script src="js/app.js?v=20261105r5"></script>
+  <script src="js/downloads.js?v=20261105r5"></script>
+</body>
+</html>

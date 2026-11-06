@@ -1,0 +1,59 @@
+table,variable,stata_variable,type,units,definition
+records,id,id,string,none,"Unique, stable source ledger record identifier."
+records,investor_type,investor_type,string,none,"firm = commercial corporate investor; government = public institution, public lender, sovereign fund or national framework. Classification follows the ledger; it does not verify financing origin."
+records,firm_group,firm_group,string,none,Group used by the map for company selection; a joint venture is counted once.
+records,firm,firm,string,none,"Named investing entity, U.S. affiliate, target or joint venture."
+records,taiwanese_parent,taiwanese_parent,string,none,Taiwanese parent or investors named by the source.
+records,origin_city_taiwan,origin_city_taiwan,string,none,Original Taiwanese headquarters city from the ledger. Retained independently of merged map ports.
+records,origin_county_taiwan,origin_county_taiwan,string,none,County or municipality of the original headquarters city.
+records,state_code,state_code,string,none,"U.S. postal code including DC; US means national and unallocated, never part of a state total."
+records,state_name,state_name,string,none,State name; United States for national records.
+records,city,city,string,none,"U.S. destination city, when known."
+records,latitude,latitude,numeric,"degrees, EPSG:4326",Ledger latitude in EPSG:4326; null for national records. Not a surveyed facility position.
+records,longitude,longitude,numeric,"degrees, EPSG:4326",Ledger longitude in EPSG:4326; null for national records.
+records,project_name,project_name,string,none,"Project, transaction, presence or framework title."
+records,sector,sector,string,none,"Descriptive sector, not a standardized classification."
+records,amount_usd_million,amount_usd_million,numeric,"USD million, nominal","Nominal documented amount. Sum only rows with state_allocated = 1 for the state subtotal. National amounts are separate, may overlap projects, and must not be added. Null is not zero."
+records,amount_qualifier,amount_qualifier,string,none,"Reported, approximate or lower bound qualification supplied by the source."
+records,amount_basis,amount_basis,string,none,"announced_project_total, completed_project_total, acquisition_price, equity_investment, loan_financing or undisclosed. Different valuation concepts must be interpreted with care."
+records,transaction_value_usd_million,transaction_value_usd_million,numeric,"USD million, nominal","Whole transaction value, if reported. Not additive to the documented amount."
+records,announcement_date,announcement_date,ISO date,none,"Announcement or event date, YYYY-MM-DD, when known."
+records,status,status,string,none,Status as of the ledger cutoff. Cancelled records require a null documented amount.
+records,status_as_of,status_as_of,ISO date,none,Date the current project status was established.
+records,status_source_url,status_source_url,string,none,Evidence supporting the current status.
+records,record_kind,record_kind,string,none,"Nature of the record: project, transaction, framework or presence."
+records,route_kind,route_kind,string,none,Meaning of the displayed geographic link. A headquarters link does not establish state spending.
+records,ownership_scope,ownership_scope,string,none,Ownership and joint venture scope needed to interpret the amount.
+records,allocation_note,allocation_note,string,none,"Geographic allocation, overlap and valuation limitations. Read before aggregation."
+records,taiwanese_investor_commitment_usd_million,investor_commitment_usd_million,numeric,"USD million, nominal",Separately disclosed Taiwanese investor share. Not an additional amount. Stata alias: investor_commitment_usd_million.
+records,taiwanese_investor_commitment_note,investor_commitment_note,string,none,Scope of the Taiwanese investor share. Stata alias: investor_commitment_note.
+records,financing_origin_verified,financing_origin_verified,numeric,none,"0 = no, 1 = yes, null = unresolved. Taiwanese headquarters alone do not verify financing origin."
+records,source_url,source_url,string,none,Primary supporting source URL.
+records,source_title,source_title,string,none,Title of the primary supporting source.
+records,source_publisher,source_publisher,string,none,"Issuing company, authority or publisher."
+records,source_date,source_date,ISO date,none,Publication date of the primary source.
+records,origin_source_url,origin_source_url,string,none,Evidence supporting the headquarters origin.
+records,evidence_summary,evidence_summary,string,none,Record-level evidence and limitations.
+records,state_fips,state_fips,string,none,Two-character Federal Information Processing Standards code with leading zero. Null for US national records.
+records,state_allocated,state_allocated,numeric,none,1 only for a nonmissing amount allocated to a state. 0 for national and undisclosed records.
+records,dest_kind,dest_kind,string,none,city or state for mapped records; national for US records.
+records,origin_longitude,origin_longitude,numeric,"degrees, EPSG:4326","Representative corporate origin longitude; may be the regional fallback, never a verified source of funds."
+records,origin_latitude,origin_latitude,numeric,"degrees, EPSG:4326",Representative corporate origin latitude.
+records,as_of,as_of,ISO date,none,"Research cutoff, 2026-11-05."
+states,state_fips,state_fips,string,none,Two-character Federal Information Processing Standards code with leading zero. Null for US national records.
+states,state_code,state_code,string,none,"U.S. postal code including DC; US means national and unallocated, never part of a state total."
+states,state_name,state_name,string,none,State name; United States for national records.
+states,documented_total_usd_million,documented_total_usd_million,numeric,"USD million, nominal","State subtotal of nonmissing, state allocated amounts across both investor types. Null means no documented total."
+states,firm_total_usd_million,firm_total_usd_million,numeric,"USD million, nominal",State subtotal for firm investors only; null if no priced firm records.
+states,government_total_usd_million,government_total_usd_million,numeric,"USD million, nominal",State subtotal for government investors only; null if no priced government records.
+states,announced_usd_million,announced_usd_million,numeric,"USD million, nominal",State subtotal with announced monetary basis; null when this component is absent.
+states,completed_usd_million,completed_usd_million,numeric,"USD million, nominal",State subtotal with completed monetary basis; null when this component is absent.
+states,acquisition_usd_million,acquisition_usd_million,numeric,"USD million, nominal",State subtotal with acquisition monetary basis; null when this component is absent.
+states,equity_usd_million,equity_usd_million,numeric,"USD million, nominal",State subtotal with equity monetary basis; null when this component is absent.
+states,loan_usd_million,loan_usd_million,numeric,"USD million, nominal",State subtotal with loan monetary basis; null when this component is absent.
+states,undisclosed_usd_million,undisclosed_usd_million,numeric,"USD million, nominal",State subtotal with undisclosed monetary basis; null when this component is absent.
+states,record_count,record_count,numeric,none,"Number of records assigned to the state, including undisclosed and cancelled records."
+states,priced_record_count,priced_record_count,numeric,none,Number of records with a nonmissing state amount.
+states,unpriced_record_count,unpriced_record_count,numeric,none,Number of records with a missing state amount.
+states,no_state_total,no_state_total,numeric,none,"1 if state subtotal is null, 0 otherwise. No record does not mean zero investment."
+states,as_of,as_of,ISO date,none,"Research cutoff, 2026-11-05."

@@ -1,0 +1,151 @@
+{
+  "as_of": "2026-11-05",
+  "fixture": false,
+  "record_count": 75,
+  "state_count": 51,
+  "state_total_usd_million": 293114.225,
+  "by_type": {
+    "overall": 293114.225,
+    "firm": 288714.225,
+    "government": 4400.0
+  },
+  "national_records": 8,
+  "stata_aliases": {
+    "taiwanese_investor_commitment_usd_million": "investor_commitment_usd_million",
+    "taiwanese_investor_commitment_note": "investor_commitment_note"
+  },
+  "formats": {
+    "CSV records": {
+      "row_count": 75,
+      "all_record_amount_usd_million": 293114.2249999999,
+      "null_amount_count": 44,
+      "state_total_usd_million": 293114.2249999999,
+      "national_records": 8,
+      "national_amount_usd_million": null,
+      "by_type": {
+        "firm": 288714.2249999999,
+        "government": 4400.0
+      }
+    },
+    "CSV states": {
+      "row_count": 51,
+      "all_record_amount_usd_million": 293114.2249999999,
+      "null_amount_count": 35,
+      "state_total_usd_million": 293114.2249999999,
+      "by_type": {
+        "firm": 288714.2249999999,
+        "government": 4400.0
+      }
+    },
+    "Excel records": {
+      "row_count": 75,
+      "all_record_amount_usd_million": 293114.2249999999,
+      "null_amount_count": 44,
+      "state_total_usd_million": 293114.2249999999,
+      "national_records": 8,
+      "national_amount_usd_million": null,
+      "by_type": {
+        "firm": 288714.2249999999,
+        "government": 4400.0
+      }
+    },
+    "Excel states": {
+      "row_count": 51,
+      "all_record_amount_usd_million": 293114.2249999999,
+      "null_amount_count": 35,
+      "state_total_usd_million": 293114.2249999999,
+      "by_type": {
+        "firm": 288714.2249999999,
+        "government": 4400.0
+      }
+    },
+    "Stata records": {
+      "row_count": 75,
+      "all_record_amount_usd_million": 293114.2249999999,
+      "null_amount_count": 44,
+      "state_total_usd_million": 293114.2249999999,
+      "national_records": 8,
+      "national_amount_usd_million": null,
+      "by_type": {
+        "firm": 288714.2249999999,
+        "government": 4400.0
+      }
+    },
+    "Stata states": {
+      "row_count": 51,
+      "all_record_amount_usd_million": 293114.2249999999,
+      "null_amount_count": 35,
+      "state_total_usd_million": 293114.2249999999,
+      "by_type": {
+        "firm": 288714.2249999999,
+        "government": 4400.0
+      }
+    },
+    "GeoPackage records": {
+      "row_count": 75,
+      "all_record_amount_usd_million": 293114.2249999999,
+      "null_amount_count": 44,
+      "state_total_usd_million": 293114.2249999999,
+      "national_records": 8,
+      "national_amount_usd_million": null,
+      "by_type": {
+        "firm": 288714.2249999999,
+        "government": 4400.0
+      }
+    },
+    "GeoPackage states": {
+      "row_count": 51,
+      "all_record_amount_usd_million": 293114.2249999999,
+      "null_amount_count": 35,
+      "state_total_usd_million": 293114.2249999999,
+      "by_type": {
+        "firm": 288714.2249999999,
+        "government": 4400.0
+      }
+    }
+  },
+  "geometry_repairs": [
+    {
+      "state_code": "DE",
+      "reason": "Too few points in geometry component[-75.5603153637536 39.630063805328]",
+      "method": "make_valid, polygon components only",
+      "area_change_square_degrees": -1.1102230246251565e-16
+    },
+    {
+      "state_code": "OR",
+      "reason": "Ring Self-intersection[-119.999364290343 41.9950551335413]",
+      "method": "make_valid, polygon components only",
+      "area_change_square_degrees": -1.4210854715202004e-14
+    }
+  ],
+  "zip_verified": true,
+  "mismatches": [],
+  "source_sha256": {
+    "js/data.js": "93c65261d2fa4cf8e2d96e2da4b9b12c133312605b38c44cfde2df22f3ebbf34",
+    "js/atlas.js": "9affedeebdc1d7454d5026779d16d4f8232f548a88387c7f82a03bcc46eb2099",
+    "investment-ledger.csv": "7f60cb46727ff8dcf13cb9aff4579a5c6ba5dddfb5e752a023b97c8defb5f2dc"
+  },
+  "site_reconciliation": {
+    "data_source": "js/data.js",
+    "state_total_usd_million": 293114.225,
+    "by_type": {
+      "overall": 293114.225,
+      "firm": 288714.225,
+      "government": 4400.0
+    },
+    "priced_states": 16,
+    "records": 75,
+    "national_records": 8,
+    "matches_all_export_formats": true
+  },
+  "verified_readback": [
+    "CSV records",
+    "CSV states",
+    "Excel records",
+    "Excel states",
+    "Stata records",
+    "Stata states",
+    "GeoPackage records",
+    "GeoPackage states"
+  ]
+}
